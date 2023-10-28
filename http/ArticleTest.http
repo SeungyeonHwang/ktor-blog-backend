@@ -1,51 +1,41 @@
-POST http://127.0.0.1:8080/customer
+POST http://127.0.0.1:8888/articles
 Content-Type: application/json
 
 {
-  "id": "100",
-  "firstName": "Jane",
-  "lastName": "Smith",
-  "email": "jane.smith@company.com"
+  "title": "First Article",
+  "body": "This is the body of the first article."
 }
 
+###
+
+GET http://127.0.0.1:8888/articles
+Accept: application/json
 
 ###
-POST http://127.0.0.1:8080/customer
+
+GET http://127.0.0.1:8888/articles/1
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8888/articles/999
+Accept: application/json
+
+###
+
+PUT http://127.0.0.1:8888/articles/1
 Content-Type: application/json
 
 {
-  "id": "200",
-  "firstName": "John",
-  "lastName": "Smith",
-  "email": "john.smith@company.com"
+  "title": "Updated First Article",
+  "body": "This is the updated body of the first article."
 }
 
 ###
-POST http://127.0.0.1:8080/customer
-Content-Type: application/json
 
-{
-  "id": "300",
-  "firstName": "Mary",
-  "lastName": "Smith",
-  "email": "mary.smith@company.com"
-}
-
+DELETE http://127.0.0.1:8888/articles/1
 
 ###
-GET http://127.0.0.1:8080/customer
-Accept: application/json
 
-###
-GET http://127.0.0.1:8080/customer/200
-Accept: application/json
+DELETE http://127.0.0.1:8888/articles/999
 
-###
-GET http://127.0.0.1:8080/customer/500
-Accept: application/json
-
-###
-DELETE http://127.0.0.1:8080/customer/100
-
-###
-DELETE http://127.0.0.1:8080/customer/500
