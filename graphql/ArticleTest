@@ -1,0 +1,31 @@
+# query {
+#   articles {
+#     id
+#     title
+#     body
+#   }
+# }
+
+# query {
+#   article(id: 1) {
+#     id
+#     title
+#     body
+#   }
+# }
+
+# mutation {
+#   addNewArticle(title: "New Article", body: "This is a new article.") {
+#     id
+#     title
+#     body
+#   }
+# }
+
+# mutation {
+#   editArticle(id: 1, title: "Updated Title", body: "Updated body.")
+# }
+
+# mutation {
+#   deleteArticle(id: 1)
+# }

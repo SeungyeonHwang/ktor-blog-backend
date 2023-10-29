@@ -7,6 +7,7 @@ val exposed_version: String by project
 val postgres_version: String by project
 val hikaricp_version: String by project
 val ehcache_version: String by project
+val kgraphql_version: String by project
 
 
 plugins {
@@ -43,4 +44,10 @@ dependencies {
     implementation("org.postgresql:postgresql:$postgres_version")
     implementation("com.zaxxer:HikariCP:$hikaricp_version")
     implementation("org.ehcache:ehcache:$ehcache_version")
+
+    implementation("com.apurebase:kgraphql:$kgraphql_version")
+    implementation("com.apurebase:kgraphql-ktor:$kgraphql_version")
+
+    implementation("io.insert-koin:koin-ktor:3.5.0")
+
 }
